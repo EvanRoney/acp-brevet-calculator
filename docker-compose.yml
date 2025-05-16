@@ -6,12 +6,15 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - .:/todo 
+      - .:/app
     environment:
       - DB_PORT_27017_TCP_ADDR=db
+      - FLASK_ENV=development
+      - FLASK_APP=flask_brevets.py
     depends_on:
       - db
-  website:
+      
+  frontend:
     image: php:apache
     volumes:
       - ./website:/var/www/html
