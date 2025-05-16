@@ -9,6 +9,7 @@ to build the containers and start all the services defined in the docker-compose
 This program calculates opening and closing times for an ACP brevet.
 
 When you run the program you must input:
+
         Brevet Distance
         Starting Date
         Starting Time
