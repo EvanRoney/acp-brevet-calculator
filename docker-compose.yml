@@ -1,0 +1,31 @@
+version: '3'
+services:
+  web:
+    build: .
+    command: python -u flask_brevets.py
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/todo 
+    environment:
+      - DB_PORT_27017_TCP_ADDR=db
+    depends_on:
+      - db
+  website:
+    image: php:apache
+    volumes:
+      - ./website:/var/www/html
+    ports:
+      - "5001:5000"
+    depends_on:
+      - web
+
+  db:
+    image: mongo:4.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

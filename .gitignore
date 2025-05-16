@@ -1,0 +1,6 @@
+*.ini
+__pychache__/
+.env
+node_modules/
+*.log
+*.pyc

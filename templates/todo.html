@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brevet Control times</title>
+    <style>
+        table{
+            width: 100%;
+	    border-collapse: collapse;
+        }
+        th, td{
+            padding: 8px;
+	    text-align: left;
+	    border-bottom: 1px solid #ddd;
+        }
+        th{
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Brevet Control times</h1>
+    {% if items %}
+	<table>
+	    <thead>
+	        <tr>
+		    <th>Open Time</th>
+		    <th>Close Time</th>
+		</tr>
+            <thead>
+	    <tbody>
+                {% for open, close in items %}
+		    <tr>
+	                <td>{{ open }}</td>
+		        <td>{{ close }}</td>
+	            </tr>
+		{% endfor %}
+	    </tbody>
+	</table>
+    {% else %}
+	<p>No items found</p>
+    {% endif %}
+    <br>
+    <form action="{{ url_for('clear') }}" method="post">
+        <button type="submit">Back to Brevet Calculator</button></a>
+    </form>
+</body>
+</html>
