@@ -20,7 +20,7 @@ Once you have chosen one of those you may:
         add "/csv" to view the data is csv format
         add "/json" to view the data in json format (this is default)
 
-An use-case example of this would be:
+A use-case example of this would be:
 
         http://<host:port>/listAll/csv
 
