@@ -1,5 +1,5 @@
 FROM python:3.8
-ADD . /todo
-WORKDIR /todo
+ADD . /app
+WORKDIR /app
 RUN pip install -r requirements.txt
 
