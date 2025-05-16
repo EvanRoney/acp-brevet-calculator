@@ -1,4 +1,10 @@
-Author: Evan Roney  Contact: eroney@uoregon.edu
+Author: Evan Roney  Contact: evan.roney@outlook.com
+
+This program uses Docker and Docker Compose. Once you clone the repo, run:
+
+        docker-compose up --build
+
+to build the containers and start all the services defined in the docker-compose.yml
 
 This program calculates opening and closing times for an ACP brevet.
 
